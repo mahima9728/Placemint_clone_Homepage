@@ -21,25 +21,9 @@ const TrustedBrands = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4">
-            270+ Brands that trust us
+            <span className="text-green-800">270+ </span> Brands that trust us
           </h2>
         </div>
-
-        {/* Company Logos Grid */}
-        {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center mb-16">
-          {brands.map((brand, index) => (
-            <div
-              key={index}
-              className="glass-card rounded-xl p-6 w-full h-24 flex items-center justify-center hover:scale-105 transition-all duration-300"
-            >
-              <img 
-                src={brand.logo} 
-                alt={brand.alt}
-                className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0"
-              />
-            </div>
-          ))}
-        </div> */}
 
         {/* Infinite Scrolling Brand Marquee */}
         <div className="overflow-hidden relative">

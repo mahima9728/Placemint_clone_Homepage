@@ -37,7 +37,7 @@ const steps = [
 
 const PlacemintWay = () => {
   return (
-    <section className="py-24 bg-[#0f172a] text-white relative overflow-hidden">
+    <section className="py-24 bg-black/50 text-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-24">

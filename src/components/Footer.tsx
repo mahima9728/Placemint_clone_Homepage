@@ -52,31 +52,12 @@ const Footer = () => {
               processes, we’ll help you achieve success every step of the way.
             </p>
             <div className="flex space-x-4">
-              {/* Social Media Icons */}
-              {/* <a
-                href="#"
-                className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary/30 transition-colors"
-              >
-                <span className="text-primary text-sm font-bold">f</span>
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary/30 transition-colors"
-              >
-                <span className="text-primary text-sm font-bold">t</span>
-              </a> */}
               <a
                 href="#"
                 className="w-10 h-10 bg-yellow-700 hover:bg-yellow-800 rounded-full flex items-center justify-center transition-colors"
               >
                 <span className="text-primary text-sm font-bold">in</span>
               </a>
-              {/* <a
-                href="#"
-                className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary/30 transition-colors"
-              >
-                <span className="text-primary text-sm font-bold">ig</span>
-              </a> */}
             </div>
           </div>
 
@@ -101,28 +82,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        {/* Newsletter Signup */}
-        {/* <div className="bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl p-10 mb-16 border border-primary/30">
-          <div className="max-w-lg mx-auto text-center">
-            <h3 className="text-3xl font-black text-foreground mb-4">
-              Stay Updated
-            </h3>
-            <p className="text-muted-foreground mb-8 text-lg">
-              Get the latest job opportunities and career tips delivered to your
-              inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-4 bg-background/80 border border-white/20 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent backdrop-blur-sm text-lg"
-              />
-              <button className="btn-primary-gradient px-8 py-4 whitespace-nowrap text-lg font-bold">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div> */}
+
         {/* Bottom Bar */}
 
         <div className="pt-4 pb-8 bg-blue-400">
@@ -131,26 +91,6 @@ const Footer = () => {
               Copyright © 2025 Tekaju Technologies Pvt. Ltd. All Rights
               Reserved.{" "}
             </p>
-            {/* <div className="flex space-x-3">
-              <a
-                href="#"
-                className="text-muted-foreground text-sm hover:text-primary transition-colors"
-              >
-                Terms & Conditions
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground text-sm hover:text-primary transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-muted-foreground text-sm hover:text-primary transition-colors"
-              >
-                Cookie Policy
-              </a>
-            </div> */}
           </div>
         </div>
       </div>

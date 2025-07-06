@@ -41,9 +41,7 @@ const AboutUs = () => {
               </span>
               <h2 className="text-4xl md:text-5xl font-black leading-tight">
                 India's only Guaranteed <br />
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Direct Interview Platform
-                </span>
+                <span className="text-blue-800">Direct Interview</span> Platform
               </h2>
               <p className="text-xl text-white/80">
                 Hassle‑Free Gateway To{" "}

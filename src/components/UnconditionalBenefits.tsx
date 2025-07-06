@@ -156,7 +156,7 @@ const benefits = [
 
 const UnconditionalBenefits = () => {
   return (
-    <section className="bg-[#090e23] py-20 px-4">
+    <section className="bg-black/50 py-20 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

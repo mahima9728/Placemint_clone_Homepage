@@ -49,7 +49,7 @@ const CandidateReviews = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-card/30">
+    <section className="py-20 bg-black/50 from-background to-card/30">
       <div className="container mx-auto px-4 py-20">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* Left: Image */}
@@ -86,7 +86,7 @@ const CandidateReviews = () => {
         </div>
         {/* Additional Reviews Grid */}
         <div className="overflow-x-auto">
-          <div className="flex gap-6 mt-12 px-4 snap-x snap-mandatory scroll-smooth overflow-x-auto max-w-6xl mx-auto">
+          <div className="flex gap-6 mt-12 px-4 snap-x snap-mandatory scroll-smooth overflow-x-auto max-w-6xl mx-auto scrollbar-hide">
             {testimonials.slice(1, 4).map((testimonial, index) => (
               <div
                 key={index}

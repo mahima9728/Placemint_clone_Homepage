@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
+import animatePlugin from "tailwindcss-animate"; // ✅ Correct ES import
 
-export default {
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -14,7 +15,6 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        // '2xl': '1400px'
         "custom-md": "1050px",
       },
     },
@@ -90,13 +90,32 @@ export default {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+        // ✅ Added for animated word effect
+        fadeUp: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        blink: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         scroll: "scroll 30s linear infinite",
+        fadeUp: "fadeUp 0.3s ease forwards", // ✅ custom animation
+        blink: "blink 1s step-start infinite",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+  plugins: [animatePlugin],
+};
+
+export default config;
