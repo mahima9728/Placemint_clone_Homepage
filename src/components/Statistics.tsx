@@ -77,7 +77,7 @@ const Statistics = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10" />
 
       {/* 🔢 Stats */}
-      <div className="relative z-30 py-32 px-4 max-w-7xl mx-auto">
+      <div className="relative z-30 pt-8 pb-32 px-4 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-32">
           {stats.map((stat, index) => {
             const tiltClass =
@@ -91,7 +91,7 @@ const Statistics = () => {
               >
                 <div
                   className="bg-blue-700/40 border border-white/20 rounded-xl shadow-md
-                    px-6 py-4 w-[220px] h-[100px] text-center
+                    px-6 py-4 w-[280px] h-[140px] text-center
                     flex flex-col justify-center items-center backdrop-blur-md
                     hover:scale-105 transition-transform duration-300"
                 >
@@ -100,10 +100,10 @@ const Statistics = () => {
                       <img
                         src={stat.icon}
                         alt={stat.label}
-                        className="w-5 h-5 object-contain filter brightness-0 invert"
+                        className="w-12 h-12 object-contain filter brightness-0 invert"
                       />
                     </div>
-                    <h3 className="text-2xl font-bold">
+                    <h3 className="text-4xl font-bold">
                       {stat.number}
                       {stat.suffix}
                     </h3>
