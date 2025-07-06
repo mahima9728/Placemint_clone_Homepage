@@ -1,33 +1,53 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import img1 from "../assets/Aboutus1.jpg";
 import img2 from "../assets/Aboutus2.jpg";
 
 const AboutUs = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const end = 1470;
+    const duration = 2000; // 1 second
+    const stepTime = Math.max(Math.floor(duration / end), 1);
+
+    const timer = setInterval(() => {
+      start += 7;
+      if (start >= end) {
+        start = end;
+        clearInterval(timer);
+      }
+      setCount(start);
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="bg-gradient-to-b from-[hsl(220,80%,8%)] to-card/30 py-20 text-white">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Side: Images with overlay */}
-          <div className="relative flex flex-col gap-6 items-center md:items-start">
-            {/* First Image with overlay card */}
+    <section className="bg-gradient-to-b from-[hsl(220,80%,8%)] to-card/30 py-16 sm:py-20 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Images Column */}
+          <div className="flex flex-col gap-6 items-center md:items-start">
+            {/* Top Image with overlay card */}
             <div className="relative w-full max-w-md mx-auto md:mx-0">
               <img
                 src={img1}
                 alt="About visual 1"
                 className="rounded-3xl shadow-xl w-full"
               />
-              <div className="absolute -top-8 right-2 bg-white/10 border border-white/20 bg-blue-700 text-center rounded-xl px-6 py-4 shadow-md w-48 sm:w-56 md:w-64">
-                <h4 className="text-xl md:text-2xl font-bold text-white">
-                  1,470+
+              <div className="absolute -top-8 right-2 bg-blue-500 text-white text-center rounded-xl px-6 py-5 shadow-md w-48 sm:w-56 md:w-64 animate-fade-in-up">
+                <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+                  {count}+
                 </h4>
-                <p className="text-white/70 text-xs md:text-sm">
+                <p className="text-sm sm:text-base md:text-lg text-white/90">
                   Candidates Placed
                 </p>
               </div>
             </div>
 
-            {/* Second Image */}
+            {/* Bottom Image */}
             <img
               src={img2}
               alt="About visual 2"
@@ -35,7 +55,7 @@ const AboutUs = () => {
             />
           </div>
 
-          {/* Right Side: Text Content */}
+          {/* Text Content Column */}
           <div className="space-y-8 text-left">
             <div className="space-y-4">
               <p className="text-sm font-semibold text-accent uppercase tracking-wider">
@@ -75,9 +95,11 @@ const AboutUs = () => {
             </div>
 
             {/* CTA */}
-            <Button className="rounded-md border-2 border-yellow-500 bg-black text-yellow-500 px-6 py-2 hover:border-yellow-300 hover:bg-black transition-colors duration-200">
-              Learn More
-            </Button>
+            <div className="inline-block group transition-all duration-300">
+              <Button className="rounded-md border-2 border-yellow-500 bg-black text-yellow-500 px-6 py-2 transition-all duration-300 group-hover:px-7 group-hover:py-2.5 hover:bg-yellow-600 hover:text-black hover:border-yellow-600">
+                Learn More
+              </Button>
+            </div>
           </div>
         </div>
       </div>

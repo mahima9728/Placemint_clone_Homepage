@@ -47,28 +47,32 @@ const LimitedSlots = () => {
   return (
     <section className="py-20 bg-black/50 from-background to-card/50">
       <div className="container mx-auto px-4">
+        {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
             Limited Interview{" "}
             <span className="bg-gradient-to-r from-blue-500 to-red-500 bg-clip-text text-transparent">
-              Slots{" "}
-            </span>
+              Slots
+            </span>{" "}
             Remaining
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12 ">
+        {/* Cards */}
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
           {jobCategories.map((category, index) => (
             <div
               key={index}
-              className="glass-card border-2 border-blue-400 rounded-2xl p-6 hover:scale-105 transition-all duration-300 bg-[#101530]"
+              className="glass-card border-2 border-blue-400 rounded-2xl p-6 bg-[#101530] hover:scale-105 transition-transform duration-300"
             >
               <div className="mb-6">
-                <h3 className="text-xl font-bold text-accent mb-5">
+                <h3 className="text-xl font-bold text-accent mb-3">
                   {category.title}
                 </h3>
                 {category.subtitle && (
-                  <p className="text-l font-bold mb-2">{category.subtitle}</p>
+                  <p className="text-base font-medium text-white/80">
+                    {category.subtitle}
+                  </p>
                 )}
               </div>
 
@@ -96,10 +100,13 @@ const LimitedSlots = () => {
           ))}
         </div>
 
+        {/* CTA Button */}
         <div className="text-center">
-          <Button className="rounded-md border-2 border-blue-500 bg-black text-white px-6 py-2 hover:border-blue-300 hover:bg-black transition-colors duration-200">
-            Apply Now
-          </Button>
+          <div className="inline-block group transition-all duration-300">
+            <Button className="rounded-md border-2 border-blue-500 bg-black text-white px-6 py-2 transition-all duration-300 group-hover:px-7 group-hover:py-2.5 hover:bg-black hover:text-white hover:border-blue-600 hover:scale-105">
+              Apply Now
+            </Button>
+          </div>
         </div>
       </div>
     </section>

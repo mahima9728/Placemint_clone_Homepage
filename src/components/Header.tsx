@@ -49,7 +49,7 @@ const Header = () => {
           {/* CTA Button (Hidden on small screens) */}
           <div className="hidden md:block">
             {/* Optional: Keep a styled button if you want for desktop */}
-            <Button className="rounded-full border-2 border-blue-500 bg-black text-white px-6 py-2 hover:border-blue-300 hover:bg-black transition-colors duration-200">
+            <Button className="rounded-full border-2 border-blue-500 bg-gradient-to-r from-black to-blue-900 text-white px-6 py-2 hover:border-blue-300 hover:bg-black transition-colors duration-200">
               Placemint Pro
             </Button>
           </div>

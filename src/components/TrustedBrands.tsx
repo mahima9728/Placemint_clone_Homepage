@@ -17,46 +17,35 @@ const TrustedBrands = () => {
   ];
 
   return (
-    <section className="py-20 bg-card/20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-foreground mb-4">
-            <span className="text-green-800">270+ </span> Brands that trust us
+    <section className="py-16 sm:py-20 bg-card/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Title */}
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="font-black text-foreground">
+            <span className="text-green-800 text-4xl sm:text-5xl md:text-6xl align-middle">
+              270+
+            </span>{" "}
+            <span className="text-sm sm:text-base md:text-lg font-semibold text-white/90 align-middle">
+              Brands that trust us
+            </span>
           </h2>
         </div>
 
-        {/* Infinite Scrolling Brand Marquee */}
+        {/* Marquee */}
         <div className="overflow-hidden relative">
-          <div className="flex whitespace-nowrap">
-            <div className="brand-marquee">
-              {[...brands, ...brands, ...brands].map((brand, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 glass-card rounded-lg p-4 w-40 h-20 flex items-center justify-center mx-4"
-                >
-                  <img
-                    src={brand.logo}
-                    alt={brand.alt}
-                    className="max-w-full max-h-full object-contain opacity-70 filter grayscale"
-                  />
-                </div>
-              ))}
-            </div>
-            {/* Duplicate for seamless loop */}
-            <div className="brand-marquee">
-              {[...brands, ...brands, ...brands].map((brand, index) => (
-                <div
-                  key={`duplicate-${index}`}
-                  className="flex-shrink-0 glass-card rounded-lg p-4 w-40 h-20 flex items-center justify-center mx-4"
-                >
-                  <img
-                    src={brand.logo}
-                    alt={brand.alt}
-                    className="max-w-full max-h-full object-contain opacity-70 filter grayscale"
-                  />
-                </div>
-              ))}
-            </div>
+          <div className="flex items-center whitespace-nowrap animate-slow-scroll gap-4 sm:gap-6 md:gap-8">
+            {[...brands, ...brands].map((brand, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 glass-card rounded-xl p-3 sm:p-4 w-28 sm:w-32 md:w-40 h-16 sm:h-20 md:h-24 flex items-center justify-center"
+              >
+                <img
+                  src={brand.logo}
+                  alt={brand.alt}
+                  className="max-w-full max-h-full object-contain opacity-70 filter grayscale"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

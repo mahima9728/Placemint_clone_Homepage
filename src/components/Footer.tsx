@@ -30,22 +30,23 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card/30 border-t border-white/10 pt-16 pb-8 text-white">
-      <div className="container mx-auto px-4">
-        {/* Main Footer Content */}
+    <footer className="bg-card/30 border-t border-white/10 pt-16 pb-0 text-white">
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1 w-full">
-            <div className="flex items-center space-x-2 mb-6">
+          {/* Logo and Description */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-0">
               <img
                 src={placemintLogo}
                 alt="Placemint"
-                className="h-20 w-20 object-contain"
+                className="h-30 w-40 object-contain"
               />
             </div>
-            <p className="text-foreground text-base sm:text-lg md:text-xl mb-4 leading-relaxed">
+            <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed">
               At Placemint we are dedicated to providing tailored solutions that
-              meet your unique needs. <br /> <br />
+              meet your unique needs.
+              <br /> <br />
               Whether it’s hiring, training, outsourcing, or setting up business
               processes, we’ll help you achieve success every step of the way.
             </p>
@@ -54,15 +55,15 @@ const Footer = () => {
                 href="#"
                 className="w-10 h-10 bg-yellow-700 hover:bg-yellow-800 rounded-full flex items-center justify-center transition-colors"
               >
-                <span className="text-primary text-sm font-bold">in</span>
+                <span className="text-primary font-bold text-sm">in</span>
               </a>
             </div>
           </div>
 
-          {/* Footer Links */}
+          {/* Footer Sections */}
           {footerSections.map((section, index) => (
             <div key={index} className="min-w-[180px]">
-              <h3 className="text-foreground font-extrabold text-lg sm:text-xl md:text-2xl text-yellow-500 mb-4">
+              <h3 className="text-yellow-500 font-bold text-lg sm:text-xl mb-4">
                 {section.title}
               </h3>
               <ul className="space-y-2">
@@ -70,7 +71,7 @@ const Footer = () => {
                   <li key={linkIndex}>
                     <a
                       href="#"
-                      className="text-foreground text-sm sm:text-base md:text-xl hover:text-primary transition-colors"
+                      className="text-white/80 text-sm sm:text-base hover:text-yellow-400 transition-colors"
                     >
                       {link}
                     </a>
@@ -80,15 +81,14 @@ const Footer = () => {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-4 pb-8 bg-blue-400 text-white text-center md:text-left">
-          <div className="flex flex-col md:flex-row justify-around items-center text-sm sm:text-base md:text-lg">
-            <p className="mb-2 md:mb-0 text-white">
-              Copyright © 2025 Tekaju Technologies Pvt. Ltd. All Rights
-              Reserved.
-            </p>
-          </div>
+      {/* 🔽 Bottom Bar Outside Container */}
+      <div className="w-full bg-blue-400 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-white text-center text-sm sm:text-base md:text-lg font-medium">
+            © 2025 Tekaju Technologies Pvt. Ltd. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>

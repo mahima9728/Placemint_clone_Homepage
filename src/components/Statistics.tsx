@@ -1,24 +1,64 @@
+import React, { useEffect, useState } from "react";
 import companiesIcon from "@/assets/companies-icon.png";
 import jobsIcon from "@/assets/jobs-icon.png";
 import bgVideo from "../assets/videoplayback_.mp4";
 
 const Statistics = () => {
+  const [partnerCount, setPartnerCount] = useState(0);
+  const [jobCount, setJobCount] = useState(0);
+
+  // Counter animation
+  useEffect(() => {
+    let partnerStart = 0;
+    let jobStart = 0;
+    const partnerEnd = 270;
+    const jobEnd = 1200;
+    const duration = 2500; // 1 second
+    const partnerStep = Math.max(Math.floor(duration / partnerEnd), 1);
+    const jobStep = Math.max(Math.floor(duration / jobEnd), 1);
+
+    const partnerTimer = setInterval(() => {
+      partnerStart += 4;
+      if (partnerStart >= partnerEnd) {
+        partnerStart = partnerEnd;
+        clearInterval(partnerTimer);
+      }
+      setPartnerCount(partnerStart);
+    }, partnerStep);
+
+    const jobTimer = setInterval(() => {
+      jobStart += 10;
+      if (jobStart >= jobEnd) {
+        jobStart = jobEnd;
+        clearInterval(jobTimer);
+      }
+      setJobCount(jobStart);
+    }, jobStep);
+
+    return () => {
+      clearInterval(partnerTimer);
+      clearInterval(jobTimer);
+    };
+  }, []);
+
   const stats = [
     {
       icon: companiesIcon,
-      number: "270+",
+      number: partnerCount,
+      suffix: "+",
       label: "Partner Companies",
     },
     {
       icon: jobsIcon,
-      number: "1,200+",
+      number: jobCount,
+      suffix: "+",
       label: "Available Jobs",
     },
   ];
 
   return (
     <section className="relative overflow-hidden text-white">
-      {/* 🔽 Gradient veil at the top */}
+      {/* 🔽 Top Gradient */}
       <div className="absolute top-0 left-0 w-full h-48 z-20 bg-gradient-to-b from-[hsl(250,80%,6%)] to-transparent" />
 
       {/* 📽 Background Video */}
@@ -36,22 +76,24 @@ const Statistics = () => {
       {/* 🔳 Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10" />
 
-      {/* 🔢 Stats Cards */}
-      <div className="relative z-30 py-40 px-4 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-start justify-between gap-80">
+      {/* 🔢 Stats */}
+      <div className="relative z-30 py-32 px-4 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-32">
           {stats.map((stat, index) => {
-            const tiltWrapper =
-              index % 2 === 0 ? "rotate-[-8deg]" : "rotate-[8deg]";
-            const tiltInner =
-              index % 2 === 0 ? "rotate-[-8deg]" : "rotate-[8deg]";
+            const tiltClass =
+              index % 2 === 0 ? "rotate-[-10deg]" : "rotate-[10deg]";
 
             return (
-              <div key={index} className={`transform ${tiltWrapper}`}>
+              <div
+                key={index}
+                className={`fade-in-tilt ${tiltClass} transform transition-transform duration-700`}
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
                 <div
-                  className={`bg-white/10 border border-white/20 rounded-xl shadow-md 
-                  px-6 py-4 w-[220px] h-[100px] text-center 
-                  flex flex-col justify-center items-center backdrop-blur-md 
-                  hover:scale-105 transition-transform duration-300 ${tiltInner}`}
+                  className="bg-blue-700/40 border border-white/20 rounded-xl shadow-md
+                    px-6 py-4 w-[220px] h-[100px] text-center
+                    flex flex-col justify-center items-center backdrop-blur-md
+                    hover:scale-105 transition-transform duration-300"
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
@@ -61,7 +103,10 @@ const Statistics = () => {
                         className="w-5 h-5 object-contain filter brightness-0 invert"
                       />
                     </div>
-                    <h3 className="text-2xl font-bold">{stat.number}</h3>
+                    <h3 className="text-2xl font-bold">
+                      {stat.number}
+                      {stat.suffix}
+                    </h3>
                   </div>
                   <p className="text-white/80 text-sm">{stat.label}</p>
                 </div>

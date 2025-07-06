@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { CheckCircle2, PlusCircle, Info } from "lucide-react"; // Import icons
+import { CheckCircle2, PlusCircle, Info } from "lucide-react";
 
 const FAQ = () => {
   const [openItem, setOpenItem] = useState("");
@@ -49,24 +49,24 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-6">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-black/50 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-m text-yellow-600 font-semibold text-primary uppercase tracking-wide mb-4">
+          <p className="text-sm font-semibold text-yellow-500 uppercase tracking-wider mb-2">
             Asked Questions
           </p>
-          <h3 className="text-4xl md:text-5xl font-black text-foreground mb-2">
+          <h3 className="text-4xl md:text-5xl font-black text-white mb-2">
             Frequently Asked <span className="text-blue-400">Questions</span>
           </h3>
-          <p className="text-foreground italic text-lg max-w-2xl mx-auto">
+          <p className="italic text-white/80 text-lg max-w-2xl mx-auto">
             Everything You Need to Know About Finding Your Dream Job
           </p>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="max-w-4xl mx-auto p-8 rounded-[30px] glass-card bg-[hsl(216,47%,40%)]">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+        <div className="max-w-5xl mx-auto p-6 sm:p-10 rounded-[30px] glass-card bg-[hsl(216,47%,40%)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
             {faqs.map((faq, index) => {
               const itemValue = `item-${index}`;
               const isOpen = openItem === itemValue;
@@ -83,23 +83,23 @@ const FAQ = () => {
                     <AccordionItem
                       value={itemValue}
                       className="border-0 rounded-full overflow-hidden transition-colors duration-300 
-             bg-[hsl(217,73%,68%)] 
-             data-[state=open]:bg-white"
+                         bg-[hsl(217,73%,68%)] 
+                         data-[state=open]:bg-white"
                     >
                       <AccordionTrigger
                         className="text-left text-lg font-semibold py-4 px-6 flex items-center justify-between transition-colors duration-300
-                        text-white data-[state=open]:text-black hover:no-underline 
-                        [&[data-state=open]>span>svg]:rotate-45"
+                          text-white data-[state=open]:text-black hover:no-underline 
+                          [&[data-state=open]>span>svg]:rotate-45"
                       >
                         <span className="flex items-center">
                           {faq.type === "checked" ? (
                             <CheckCircle2
-                              size={24}
+                              size={22}
                               className="mr-3 text-primary"
                             />
                           ) : (
                             <PlusCircle
-                              size={24}
+                              size={22}
                               className="mr-3 text-primary"
                             />
                           )}
@@ -121,21 +121,18 @@ const FAQ = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="text-center mt-4">
-          <div className="rounded-full border-2 border-blue-500 bg-black text-white px-5 py-3 hover:border-blue-300 hover:bg-black transition-colors duration-200">
-            <div className="flex flex-wrap items-center justify-center gap-x-14 text-accent font-semibold text-lg whitespace-nowrap">
-              {/* Email Icon + Text */}
-              <div className="flex items-center text-primary gap-2">
-                <span>📧</span>
-                <span className="text-white">support@placemint.in</span>
-              </div>
-
-              {/* Info Text */}
-              <p className="text-white font-semibold inline-flex items-center gap-2">
-                <Info size={18} className="text-accent" />
-                Looking For More Information? Contact Us!
-              </p>
+        <div className="text-center mt-10">
+          <div className="inline-flex flex-wrap items-center justify-center gap-6 rounded-full border-2 border-blue-500 bg-black px-6 py-4 hover:border-blue-300 transition duration-200">
+            <div className="flex items-center text-primary gap-2">
+              <span>📧</span>
+              <span className="text-white font-medium">
+                support@placemint.in
+              </span>
             </div>
+            <p className="text-white font-semibold inline-flex items-center gap-2 text-base">
+              <Info size={18} className="text-accent" />
+              Looking For More Information? Contact Us!
+            </p>
           </div>
         </div>
       </div>
