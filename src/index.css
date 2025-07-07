@@ -209,7 +209,7 @@ body {
       width: 0;
     }
     to {
-      width: 9ch;
+      width: 15ch;
     } /* Adjust this if word length changes */
   }
 

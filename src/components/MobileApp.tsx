@@ -12,10 +12,10 @@ const MobileApp = () => {
           {/* Left: Text Content */}
           <div className="text-left md:text-left space-y-6">
             <h2 className="text-sm font-semibold text-accent uppercase tracking-wide">
-              Placemint Mobile App
+              WesbiteSample Mobile App
             </h2>
             <h3 className="text-5xl md:text-5xl font-black text-white leading-tight">
-              Find <span className="text-blue-600">Placemint </span> on App
+              Find <span className="text-blue-600">WesbiteSample </span> on App
               Store & Play Store!
             </h3>
             <p className="font-bold text-lg text-white">Launching Soon!</p>
@@ -46,7 +46,7 @@ const MobileApp = () => {
             <div className="rounded-3xl overflow-hidden w-full max-w-[500px] aspect-[9/16]">
               <img
                 src={phoneImage}
-                alt="Placemint Phone"
+                alt="WesbiteSample Phone"
                 className="h-full w-full object-contain"
               />
             </div>

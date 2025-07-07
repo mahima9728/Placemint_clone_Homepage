@@ -22,7 +22,7 @@ const TrustedBrands = () => {
         {/* Title */}
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="font-black text-foreground">
-            <span className="text-green-800 text-4xl sm:text-5xl md:text-6xl align-middle">
+            <span className="text-green-800 text-xl sm:text-2xl md:text-4xl align-middle">
               270+
             </span>{" "}
             <span className="text-sm sm:text-base md:text-lg font-semibold text-white/90 align-middle">

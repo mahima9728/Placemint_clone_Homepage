@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import placemintLogo from "../assets/placemint-logo.png";
+import WesbiteSampleLogo from "../../public/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +19,8 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img
-              src={placemintLogo}
-              alt="Placemint Logo"
+              src={WesbiteSampleLogo}
+              alt="WesbiteSample Logo"
               className="h-16 w-23 object-contain"
             />
           </div>
@@ -42,7 +42,7 @@ const Header = () => {
               href="#"
               className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
             >
-              Placemint Pro {/* ✅ Styled like nav links */}
+              WesbiteSample Pro {/* ✅ Styled like nav links */}
             </a>
           </nav>
 
@@ -50,7 +50,7 @@ const Header = () => {
           <div className="hidden md:block">
             {/* Optional: Keep a styled button if you want for desktop */}
             <Button className="rounded-full border-2 border-blue-500 bg-gradient-to-r from-black to-blue-900 text-white px-6 py-2 hover:border-blue-300 hover:bg-black transition-colors duration-200">
-              Placemint Pro
+              WesbiteSample Pro
             </Button>
           </div>
 
@@ -80,12 +80,12 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              {/* ✅ Placemint Pro styled same as nav links */}
+              {/* ✅ WesbiteSample Pro styled same as nav links */}
               <a
                 href="#"
                 className="text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
               >
-                Placemint Pro
+                WesbiteSample Pro
               </a>
             </nav>
           </div>

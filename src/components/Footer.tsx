@@ -1,5 +1,5 @@
 import React from "react";
-import placemintLogo from "../assets/placemint-logo.png";
+import WesbiteSampleLogo from "../../public/logo.png";
 
 const Footer = () => {
   const footerSections = [
@@ -22,9 +22,9 @@ const Footer = () => {
     {
       title: "Get In Touch",
       links: [
-        "Get Hired: Careers@placemint.in",
-        "Hire From Us: Collaborations@placemint.in",
-        "Support: Support@Placemint.in",
+        "Get Hired: Careers@WesbiteSample.in",
+        "Hire From Us: Collaborations@WesbiteSample.in",
+        "Support: Support@WesbiteSample.in",
       ],
     },
   ];
@@ -38,14 +38,14 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-0">
               <img
-                src={placemintLogo}
-                alt="Placemint"
+                src={WesbiteSampleLogo}
+                alt="WesbiteSample"
                 className="h-30 w-40 object-contain"
               />
             </div>
             <p className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed">
-              At Placemint we are dedicated to providing tailored solutions that
-              meet your unique needs.
+              At WesbiteSample we are dedicated to providing tailored solutions
+              that meet your unique needs.
               <br /> <br />
               Whether it’s hiring, training, outsourcing, or setting up business
               processes, we’ll help you achieve success every step of the way.

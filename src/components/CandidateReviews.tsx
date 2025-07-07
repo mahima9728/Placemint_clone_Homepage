@@ -11,13 +11,13 @@ const CandidateReviews = () => {
     {
       name: "Ayushmaan Awasthy",
       rating: 5,
-      text: "Placemint completely changed my job search journey. From personalized guidance to unlimited interview opportunities, they made the process seamless and stress-free. I landed my dream job within weeks!",
+      text: "WesbiteSample completely changed my job search journey. From personalized guidance to unlimited interview opportunities, they made the process seamless and stress-free. I landed my dream job within weeks!",
       position: "Associate",
     },
     {
       name: "Ananya Verma",
       rating: 5,
-      text: "The interview preparation and mock sessions gave me the confidence I needed. Thanks to Placemint, I secured a managerial role in a top company!",
+      text: "The interview preparation and mock sessions gave me the confidence I needed. Thanks to WesbiteSample, I secured a managerial role in a top company!",
       position: "Associate",
     },
     {
@@ -35,13 +35,13 @@ const CandidateReviews = () => {
     {
       name: "Kabir Sinha",
       rating: 5,
-      text: "Placemint made the hiring process effortless. I was matched with roles that truly aligned with my skills. Within days, I had interviews lined up at top companies.",
+      text: "WesbiteSample made the hiring process effortless. I was matched with roles that truly aligned with my skills. Within days, I had interviews lined up at top companies.",
       position: "Software Engineer",
     },
     {
       name: "Meera Deshpande",
       rating: 5,
-      text: "Thanks to Placemint’s expert support and mock interviews, I landed a role I thought was out of reach. Their feedback and encouragement made all the difference.",
+      text: "Thanks to WesbiteSample’s expert support and mock interviews, I landed a role I thought was out of reach. Their feedback and encouragement made all the difference.",
       position: "Product Analyst",
     },
   ];

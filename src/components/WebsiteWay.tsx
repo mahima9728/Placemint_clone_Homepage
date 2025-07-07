@@ -6,7 +6,7 @@ import step4 from "../../public/step4.png";
 
 const steps = [
   {
-    title: "Sign Up With Placemint",
+    title: "Sign Up With WesbiteSample",
     subtitle:
       "Take the first step towards your career by creating your profile.",
     description: "Share your details and career aspirations to get started.",
@@ -35,14 +35,14 @@ const steps = [
   },
 ];
 
-const PlacemintWay = () => {
+const WesbiteSampleWay = () => {
   return (
     <section className="py-20 bg-black/50 text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 sm:mb-24">
           <h2 className="text-sm font-semibold text-accent uppercase tracking-[0.2em] mb-4">
-            The Placemint Way
+            The WesbiteSample Way
           </h2>
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
             Land Your Dream Job In{" "}
@@ -94,4 +94,4 @@ const PlacemintWay = () => {
   );
 };
 
-export default PlacemintWay;
+export default WesbiteSampleWay;

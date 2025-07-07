@@ -56,9 +56,9 @@ const Hero = () => {
           <span className="relative inline-block">
             <span
               className="gradient-text inline-block whitespace-nowrap overflow-hidden animate-typed-fixed"
-              style={{ width: "9ch" }}
+              style={{ width: "15ch" }}
             >
-              Placemint
+              WesbiteSample
             </span>
             <span className="absolute top-0 right-0 h-full w-[2px] bg-blue-400 animate-blink"></span>
           </span>

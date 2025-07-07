@@ -23,25 +23,25 @@ const FAQ = () => {
       type: "plus",
     },
     {
-      question: "What Jobs Are Most Popular on Placemint?",
+      question: "What Jobs Are Most Popular on WesbiteSample?",
       answer:
         "Sales, Marketing, HR, Operations, Tech roles like Frontend/Backend Developers, and Customer Support are some of the most sought-after profiles.",
       type: "plus",
     },
     {
-      question: "Can I Submit My CV and Portfolio at Placemint?",
+      question: "Can I Submit My CV and Portfolio at WesbiteSample?",
       answer:
         "Yes, you can upload your CV and portfolio, and we will connect you to jobs tailored to your skills and experience.",
       type: "checked",
     },
     {
-      question: "How Do I Find Specific Vacancies on Placemint?",
+      question: "How Do I Find Specific Vacancies on WesbiteSample?",
       answer:
         "Simply sign up, fill out your details, and take an assessment. We'll match you with job openings that suit your profile and preferences.",
       type: "plus",
     },
     {
-      question: "How Do I Register as a User on Placemint?",
+      question: "How Do I Register as a User on WesbiteSample?",
       answer:
         "Registering is easy! Just fill out the sign-up form, complete the assessment, and unlock access to tailored job opportunities.",
       type: "plus",
@@ -126,7 +126,7 @@ const FAQ = () => {
             <div className="flex items-center text-primary gap-2">
               <span>📧</span>
               <span className="text-white font-medium">
-                support@placemint.in
+                support@WesbiteSample.in
               </span>
             </div>
             <p className="text-white font-semibold inline-flex items-center gap-2 text-base">
